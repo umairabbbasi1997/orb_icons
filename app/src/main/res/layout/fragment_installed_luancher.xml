@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.InstalledLuancherFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_installed_laucher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Installed Launcher"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="36dp"
+                android:textSize="17sp"
+
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            </TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_installed_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_launcher"
+
+                app:layout_constraintTop_toBottomOf="@id/tv_installed_laucher"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_supported"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supported Launchers"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="36dp"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rv_installed_launcher"
+
+                >
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_installed_supported"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_launcher"
+
+                app:layout_constraintTop_toBottomOf="@id/tv_supported"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

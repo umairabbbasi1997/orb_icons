@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/tv_folder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FOLDER"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="32dp"
+                android:textSize="15sp"
+                android:textColor="@color/color_red"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ICON"
+                android:layout_marginLeft="30dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tv_folder"
+
+                >
+
+            </TextView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recyler_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_icon"
+
+                >
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    android:layout_marginBottom="8dp"/>
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dotsColor="@color/dark_gray"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="10dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="2.5"
+                    app:selectedDotColor="@color/color_red"
+                    app:progressMode="false"
+                    app:layout_constraintTop_toBottomOf="@id/view_pager_slider"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+                <!--<LinearLayout
+                    android:id="@+id/SliderDots"
+                    android:layout_below="@+id/view_pager_slider"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            -->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/rv_anything_icons"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                 android:orientation="horizontal"
+                 app:spanCount="4"
+                 tools:listitem="@layout/item_icon_recyclerview"
+                 app:layout_constraintTop_toBottomOf="@id/tv_icon"
+                 app:layout_constraintBottom_toTopOf="@id/bottom_layout"
+                 ></androidx.recyclerview.widget.RecyclerView>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/exclusive_background"
+                app:layout_constraintTop_toBottomOf="@id/recyler_layout"
+                >
+                <TextView
+                    android:id="@+id/tv_orb_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ORB ICONS"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="32dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/color_red"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc congue ex vel nisl viverra, sit amet aliquet lectus ullamcorper. EXPLORE"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/tv_orb_icon"
+
+                    >
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/iv_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/star_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_details"
+                    >
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate &amp; Reviews"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toRightOf="@id/iv_star"
+                    app:layout_constraintTop_toTopOf="@id/iv_star"
+
+                    >
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/share_icon"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_details"
+                    >
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="34dp"
+                    android:background="@drawable/exclusive_icon_img"
+                    app:layout_constraintTop_toBottomOf="@id/iv_star"
+                    >
+
+                </ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

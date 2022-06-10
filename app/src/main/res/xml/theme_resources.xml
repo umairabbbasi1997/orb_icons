@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Theme version="1">
+    <Label value="Orb Icons" />
+    <Wallpaper image="wallpaper" />
+    <LockScreenWallpaper image="wallpaper" />
+    <ThemePreview image="preview" />
+    <ThemePreviewWork image="preview" />
+    <ThemePreviewMenu image="preview" />
+    <DockMenuAppIcon selector="drawer" />
+
+    <!-- Contacts App -->
+    <AppIcon
+        name="com.android.contacts/com.android.contacts.DialtactsContactsEntryActivity"
+        image="call_log" />
+
+    <AppIcon
+        name="com.android.contacts/"
+        drawable="contacts" />
+
+    <AppIcon
+        name="com.android.settings/"
+        drawable="settings" />
+
+
+</Theme>

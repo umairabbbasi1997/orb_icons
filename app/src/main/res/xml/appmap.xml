@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<appmap>
+
+    <!-- Contacts App -->
+    <item
+        class="com.android.contacts.DialtactsContactsEntryActivity"
+        name="people" />
+
+    <item
+        class="com.android.contacts"
+        name="contacts" />
+
+    <item
+        class="com.android.gallery"
+        name="gallery" />
+
+    <item
+        class="com.android.phone"
+        name="call_log" />
+
+    <item
+        class="com.android.settings"
+        name="settings" />
+
+</appmap>
